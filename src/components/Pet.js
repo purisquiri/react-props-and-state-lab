@@ -6,18 +6,18 @@ class Pet extends React.Component {
       <div className="card">
         <div className="content">
           <a className="header">
-            {(this.props.data.gender == "female") ? '♀' : '♂' }
-            {this.props.data.name}
+            {(this.props.pet.gender == "female") ? '♀' : '♂' }
+            {this.props.pet.name}
           </a>
           <div className="meta">
-    <span className="date">{this.props.data.type}</span>
+    <span className="date">{this.props.pet.type}</span>
           </div>
           <div className="description">
-            <p>Age: {this.props.data.age}</p>
-            <p>Weight: {this.props.data.weight}</p>
+            <p>Age: {this.props.pet.age}</p>
+            <p>Weight: {this.props.pet.weight}</p>
           </div>
         </div>
-        <div className="extra content">{this.props.data.isAdopted ? 
+        <div className="extra content">{this.props.pet.isAdopted ? 
           <button className="ui disabled button">Already adopted</button> :
           <button value={this.props.value}  onClick={this.props.onAdoptPet} className="ui primary button">Adopt pet</button>}
         </div>
